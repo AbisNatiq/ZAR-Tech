@@ -1,0 +1,102 @@
+{% extends 'blog/basic.html' %}
+{% block css %}
+            body { padding-top: 70px; }
+          .col-md-3
+          {
+          display: inline-block;
+          margin-left:-4px;
+          }
+
+          .carousel-indicators .active {
+          background-color: blue;
+            }
+
+          .col-md-3 img{
+
+          width:100%;
+          height:auto;
+          }
+
+          body .carousel-indicator li{
+          background-color: blue;
+          }
+
+          body .carousel-indicators{
+          bottom: 0;
+          }
+
+          body .carousel-control-prev-icon,
+          body .carousel-control-next-icon{
+          background-color: blue;
+          }
+           body .no-padding{
+           padding-left: 0,
+           padding-right: 0;
+           }
+ {% endblock %}
+
+{% block body %}
+{% load static %}
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+        {{posts.post_title}}
+      </h3>
+
+      <div class="blog-post">
+        <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+           <img src="/media/{{posts.thumbnail}}" class="bd-placeholder-img" width="500" height="350"
+               aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c">
+             <hr>
+          Link:<a href="{{posts.link}}">{{posts.link}}</a>
+        <p>{{posts.desc}}</p>
+        <hr>
+
+        <blockquote>
+          <p> <strong></strong></p>
+        </blockquote>
+        <p></em></p>
+        <h2></h2>
+        <p></p>
+        <h3></h3>
+        <p></p>
+        <pre><code></code></pre>
+        <p></p>
+        <h3></h3>
+        <p></p>
+        <p></p>
+        <p.></p.></p>
+      </div><!-- /.blog-post -->
+
+
+
+
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div><!-- /.blog-main -->
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">About</h4>
+        <p class="mb-0">This is an <em>Tech Blog</em> in this blog we provide you latest tech rather any other platforms....</p>
+      </div>
+
+
+      <div class="p-4">
+        <h4 class="font-italic">Contact Us</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</main>
+ {% endblock %}
